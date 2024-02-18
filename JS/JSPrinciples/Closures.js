@@ -28,7 +28,7 @@ todos.get().then(response => console.log(response.slice(0,3)))
 
 */
 
-function duplicate(arr) {
+/* function duplicate(arr) {
     let pos = 0
     let finalLength = arr.length
     while(pos < finalLength ){
@@ -39,3 +39,20 @@ function duplicate(arr) {
   }
 
 console.info(duplicate([1,2,3,4,5])); // [1,2,3,4,5,1,2,3,4,5]
+ */
+
+function curry(fn) {
+  const args = []
+  return function inner(arg) {
+    if(args.length === fn.length) return fn(...args)
+    args.push(arg)
+    return inner
+  }
+}
+
+function add(a, b) {
+  return a + b
+}
+
+const curriedAdd = curry(add)
+console.log(curriedAdd(2)(3)()) // 5
