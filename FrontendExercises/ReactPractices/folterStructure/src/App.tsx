@@ -32,9 +32,7 @@ function  App() {
 
   return (
     <div className='exercisesSegment'>
-      <div>
-        <h1>React exercises</h1>
-      </div>
+      <h1>React exercises</h1>
       <div className='bodySegment'>
         <div className="sections">
           <h2>Sections</h2>
@@ -43,9 +41,10 @@ function  App() {
           )}
         </div>
         <div className='content'>
-          <h2>Actual section: {actualSection}</h2>
-          {(actualSection && Exercise !== undefined) && <Exercise />}
-           
+          <h2>Actual section: {actualSection}</h2> 
+          <div className='sectionContent'>
+            {(actualSection && Exercise !== undefined) && <Exercise />}
+          </div>
         </div>
       </div>
     </div>

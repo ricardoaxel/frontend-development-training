@@ -5,9 +5,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .exercisesSegment {
+  position: absolute;
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -18,17 +20,23 @@
   height: 80%;
 }
 
+.pageTitle {
+  height: 3rem;
+}
+
 .bodySegment {
   display: flex;
-  height: 100%;
+  height: calc(100% - 3rem);
   justify-content: space-between;
 }
+
 
 .sections {
   width: 20%;
 }
 
 .selectedSection {
+  position: relative;
   font-weight: bold;
   color: rgb(163, 191, 227);
   cursor: default;
@@ -36,11 +44,17 @@
 
 .content {
   width: 75%;
+  overflow: auto;
 }
 
 .content h2 {
   border-bottom: 1px solid black;
   padding-bottom: .5rem;
+  height: 2rem;
+}
+
+.sectionContent {
+  height: calc(100% - 2rem);
 }
 
 ul,

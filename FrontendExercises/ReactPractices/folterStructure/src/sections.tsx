@@ -8,9 +8,18 @@ export const sections: SectionModel[] = [
           name: "Classes",
           sections: [
             {
-              name: "ClassEvents"
+              name: "ClassEventsES6"
+            },  
+            {
+              name: "ClassEventsES7"
+            },
+            {
+              name: "LifeCycle"
+            },
+            {
+              name: "AjaxApis"
             }
-          ]
+          ],
         },
         {
           name: "Functional Components"
@@ -22,6 +31,9 @@ export const sections: SectionModel[] = [
       sections: [
         {
           name: "Queue"
+        },
+        {
+          name: "Sorting"
         },
         {
           name: "Sub1 Title", 
